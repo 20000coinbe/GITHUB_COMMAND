@@ -9,13 +9,29 @@
 
 2.GitHub.com에서 디렉터리 생성
 
-3.PC와 동기화
- - git clone [2번에서 생성한 디렉터리 주소] : PC내 해당 디렉터리로 이동 후 사용
+3.PC와 동기화(PC내 해당 디렉터리로 이동 후 사용)
+ - git clone [2번에서 생성한 디렉터리 주소] : 원격저장소를 복제하여 저장소를 생성
  - 숨겨져있는 '.git'이라는 폴더확인
 
 4. 받아온 GITHIB_COMMAD에서 작업
 
-5. 저장소에 올리기(working dir -> stage(index) -> head -> 원격저장소)
- - git add [파일/디렉터리명] : stage상태로 변경
- - git commit [-m] ["메시지"] : head상태로 변경, "메시지 작성습관 들이기"
- - git push : 원격저장소로 보내기
+5. 원격저장소에 올리기(working dir -> Staging Area -> Local Repository -> 원격저장소)
+ - git add [파일/디렉터리명] : Staging Area 상태로 변경
+ - git commit [-m] ["메시지"] : Local Repository상태로 변경, "메시지 작성습관"
+ - git push : commit상태의 모든 내용을 원격저장소로 보내기
+              옵션 : git push -f : 강제 push
+ 5.1 Commit 상태 되돌리기
+  - 
+  - git reset [--hard/--soft] Commit해쉬값 : git log를 통해서 얻은 해쉬값을 사용해 이전에 있던 Commit들 중 하나로 돌아 갈 수 있다
+    --hard : 선택한 Commit을 제외하고 모두 지운 상태로 reset
+    --soft : 선택한 Commit 이후의 기록을 유지한 상태로 reset
+    --mixed : ....
+
+6. 원격저장소에서 내려받기
+ - git fetch : 원격저장소의 변경사항을 가져와 갱신
+ - git merge : Local Repository의 내용을 working dir로 갱신
+ - git pull : fetch와 merge의 기능을 한번에 사용, 주로 사용
+
+
+7. 브런치, 로그
+ - git log : 로그(내역) 확인
