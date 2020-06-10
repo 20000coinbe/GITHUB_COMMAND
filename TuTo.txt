@@ -18,9 +18,12 @@
 5. 원격저장소에 올리기(working dir -> Staging Area -> Local Repository -> 원격저장소)
  - git add [파일/디렉터리명] : Staging Area 상태로 변경
  - git commit [-m] ["메시지"] : Local Repository상태로 변경, "메시지 작성습관"
+   5.1 commit 메시지 변경
+    - git commit --amend : 메시지 수정, 리눅스 vi(m)과 유사한 커멘드 
+
  - git push : commit상태의 모든 내용을 원격저장소로 보내기
               옵션 : git push -f : 강제 push
- 5.1 Commit 상태 되돌리기
+ 5.2 Commit 상태 되돌리기
   - 
   - git reset [--hard/--soft] Commit해쉬값 : git log를 통해서 얻은 해쉬값을 사용해 이전에 있던 Commit들 중 하나로 돌아 갈 수 있다
     --hard : 선택한 Commit을 제외하고 모두 지운 상태로 reset
@@ -33,5 +36,18 @@
  - git pull : fetch와 merge의 기능을 한번에 사용, 주로 사용
 
 
-7. 브런치, 로그
+7. 로그
  - git log : 로그(내역) 확인
+
+8. 브랜치 : 동시에 여러 개발자들이 프로젝트에서 각기 다른 기능을 개발할 수 있도록 해주는 기능(서로 영향을 받지 X)
+ 8.1 구성
+  - Master Branch : git저장소를 만들 때 자동으로 생성, 일반적으로 배포가 가능한 수준의 안정화된 버전
+                    Master Branch는 항상 안정화된 상태를 유지!!!!!!
+  - 토픽 브랜치 : 특정한 기능을 위해 만들어진 브랜치
+   ex) Develop Branch : 특정 개발시점에 생성하는 브랜치 
+       Bug Fix Branch : 버그 수정을 위한 브랜치, 해결이 되면 Master와 병합
+
+ - git branch [브랜치 이름] : 브랜치 생성 및 현재 브랜치
+ - git checkout [브랜치 이름] : 브랜치 이동, 원격저장소에는 반영 X
+ - git merge [통합할 브랜치 이름] : Master와 병합, Master브랜치로 이동 후 사용
+ - git branch -d [제거할 브랜치 이름] : 브랜치 삭제
