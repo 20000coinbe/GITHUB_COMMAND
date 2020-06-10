@@ -5,11 +5,7 @@ def sub(a,b):
     return a - b
 
 def mutifly(a, b):
-<<<<<<< HEAD
-    return a * b
-=======
     return a * b
 
 def divide(a , b):
     return a / b
->>>>>>> develop
