@@ -1,0 +1,21 @@
+0. Init
+ - git : 설치 및 명령어 확인
+ - git --version : 버전확인
+
+1.전역설정
+ - git config --global user.name [유저이름] : 이름 등록
+ - git config --global user.email [유저이메일] : 이메일 등록
+ - (선택) git config --global color.ui "auto" : 터미널내용 컬러로 표기
+
+2.GitHub.com에서 디렉터리 생성
+
+3.PC와 동기화
+ - git clone [2번에서 생성한 디렉터리 주소] : PC내 해당 디렉터리로 이동 후 사용
+ - 숨겨져있는 '.git'이라는 폴더확인
+
+4. 받아온 GITHIB_COMMAD에서 작업
+
+5. 저장소에 올리기(working dir -> stage(index) -> head -> 원격저장소)
+ - git add [파일/디렉터리명] : stage상태로 변경
+ - git commit [-m] ["메시지"] : head상태로 변경, "메시지 작성습관 들이기"
+ - git push : 원격저장소로 보내기
