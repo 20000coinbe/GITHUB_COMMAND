@@ -48,4 +48,6 @@
        Bug Fix Branch : 버그 수정을 위한 브랜치, 해결이 되면 Master와 병합
 
  - git branch [브랜치 이름] : 브랜치 생성 및 현재 브랜치
- - git checkout [브랜치 이름] : 브랜치 이동
+ - git checkout [브랜치 이름] : 브랜치 이동, 원격저장소에는 반영 X
+ - git merge [통합할 브랜치 이름] : Master와 병합, Master브랜치로 이동 후 사용
+ - git branch -d [제거할 브랜치 이름] : 브랜치 삭제
