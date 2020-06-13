@@ -38,6 +38,16 @@
 
 7. 로그
  - git log : 로그(내역) 확인
+ - git log --stat : 각 commit에 대한 통계 정보
+ - git log --pretty=oneline : commit정보가 1줄로 간략히 표시
+   7.1 --pretty format 표현식
+    - %H : commit hash
+    - %an : author name
+    - %ad : author date
+    - %ar : author date, relative
+    - %cr : commiterdate, relative
+    - %s : subject(커밋 메시지의 주제)
+    - --graph 옵션과 함께 사용된다
 
 8. 브랜치 : 동시에 여러 개발자들이 프로젝트에서 각기 다른 기능을 개발할 수 있도록 해주는 기능(서로 영향을 받지 X)
  8.1 구성
@@ -51,3 +61,23 @@
  - git checkout [브랜치 이름] : 브랜치 이동, 원격저장소에는 반영 X
  - git merge [통합할 브랜치 이름] : Master와 병합, Master브랜치로 이동 후 사용
  - git branch -d [제거할 브랜치 이름] : 브랜치 삭제
+
+9. 충돌처리방법
+ - 두 개 이상의 branch를 merge할 때 충돌을 관리주어야 한다
+ - 해당 파일에서 <<<<< HEAD 
+                >>>>> 토픽브렌치 형태로 주석이 달리게 된다
+   쓰고 싶은 코드만 남기고 저장 후 merge 
+
+
+10. 원격저장소
+ - git remote : 현재 원격저장소 
+ - git remote show [원격저장소명] : 원격지저장소에 대한 자세한 정보
+ - git remote add [원격저장소명] [원격지주소] : 새로운 원격지저장소 등록
+ - git remote rename [바꾸려는 저장소이름] [바꾸고싶은 이름] : 원격지저장소 이름 바꾸기
+ - git remote -v : 전체목록
+ - git remote rm [원격저장소명] : 원격저장소 제거
+
+
+11. "Read ME.md" 작성
+ - 
+ 
