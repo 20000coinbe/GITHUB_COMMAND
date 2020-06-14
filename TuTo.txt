@@ -6,7 +6,7 @@
  - git config --global user.name [유저이름] : 이름 등록
  - git config --global user.email [유저이메일] : 이메일 등록
  - (선택) git config --global color.ui "auto" : 터미널내용 컬러로 표기
-
+ - git config --list : 환경설정 리스트 확인
 2.GitHub.com에서 디렉터리 생성
 
 3.PC와 동기화(PC내 해당 디렉터리로 이동 후 사용)
@@ -79,5 +79,33 @@
 
 
 11. "Read ME.md" 작성
- - 
- 
+ - github홈페이지에서 작성하는 것이 편함(Preview)
+ - md는 markdown의 확장자
+ - title(#, ##, ###, ####, #####)
+ 11.1 소스코드블럭작성법(```작성언어 내용 ```)
+  - ```c
+  - #include <stdio.h>
+    int main(void) {
+      printf("hello world");
+      return 0;
+    }
+  - ```
+ 11.2 링크 작성법 
+  - [이름](http 주소) // 괄호사이에 공백없어야함
+ - 순서없는목록 : *
+ - 인용문 : >
+ - 테이블 : | (를 이용해서 형태를 만들어준다)
+   ex) 이름|나이|주소|
+       NEO|22|Korea|
+ - 강조표시 : **강조하고싶은말**
+
+12. Git Archive명령
+ - git archive --format=압축형태 브랜치명 -o 압축파일명(상대경로도 가능)
+
+13. Git Rebase : 특정한 커밋을 수정/삭제
+ - git rebase -i : 에디터 열기
+   ex) git rebase -i HEAD~3 : 맨위에서 3줄만 에디터로 열기
+                              (HEAD~3 말고도 commit해쉬값을 넣어 줄 수도 있다) 
+ - 에디터 내부에서 vi처럼 조작하여 수정/삭제
+ ※팀 프로젝트에서는 충돌이 날 수도 있으니 commit삭제를 권장 X
+
